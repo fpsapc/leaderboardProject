@@ -1,6 +1,6 @@
 class GameScore {
-  constructor(player, score) {
-    this.player = player;
+  constructor(user, score) {
+    this.user = user;
     this.score = score;
   }
 
@@ -8,13 +8,13 @@ class GameScore {
   scoresData = [];
 
   // API URL
-  apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ABCD1234/scores/';
+  apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/yMzG8blKxFRkRArKy24E/scores/';
 
   // Show Scores
   showScores = () => {
     const scoresList = document.getElementById('list');
     scoresList.innerHTML = this.scoresData.map((item) => `
-    <li>${item.name}:<span>${item.score}</span></li>`).join('');
+    <li>${item.user} : ${item.score}</li>`).join('');
   };
 
   // fetching data from API
@@ -29,7 +29,7 @@ class GameScore {
   };
 
   // Add a new Score
-  addNewScore = async ({ player, points }) => {
+  addNewScore = async ({ user, score }) => {
     try {
       const config = {
         method: 'POST',
@@ -37,7 +37,7 @@ class GameScore {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ player, score: points }),
+        body: JSON.stringify({ user, score }),
       };
 
       const data = await fetch(this.apiURL, config);
