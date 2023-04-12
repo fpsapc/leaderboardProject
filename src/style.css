@@ -1,7 +1,78 @@
-.hello {
-    color: red;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
-body {
-    background-color: bisque;
+h1 {
+  font-size: 3rem;
+  margin: 1rem 0 3rem 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.recentScores {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recentScoreTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#refresh {
+  margin-left: 1rem;
+  height: 2rem;
+  width: 5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.recentScoreList {
+  border: 2px solid black;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+div ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.bgGrey {
+  background-color: rgb(225, 225, 225);
+}
+
+.addContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 50%;
+}
+
+.input {
+  height: 32px;
+}
+
+#submitBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#submit {
+  width: 5rem;
+  margin-left: 6.9rem;
+  height: 2rem;
 }
