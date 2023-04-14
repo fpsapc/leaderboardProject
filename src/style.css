@@ -2,12 +2,66 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url(/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
-  font-size: 3rem;
-  margin: 1rem 0 3rem 1rem;
+  font-size: calc(20px + 8vh);
+  line-height: calc(20px + 20vh);
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #f00, 0 0 10px #ff8d00, 0 0 98px #f00;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #f00, 0 0 10px #ff8d00, 0 0 98px #f00;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #f00, 0 0 10px #ff8d00, 0 0 98px #f00;
+    color: #fff6a9;
+  }
 }
 
 .container {
@@ -28,20 +82,58 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 #refresh {
-  margin-left: 1rem;
-  height: 2rem;
-  width: 5rem;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #ff7e31, #e62c03);
+  border-radius: 6px;
+  box-shadow: rgba(0.8, 1, 1, 0.7) 0 4px 8px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 25%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow 0.2s;
+  margin-left: 5%;
+}
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
 
 h2 {
   font-size: 1.8rem;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
 }
 
 .recentScoreList {
-  border: 2px solid black;
+  border: 4px solid #fff6a9;
+  border-radius: 1rem;
   width: 80%;
   margin-top: 1rem;
 }
@@ -49,10 +141,23 @@ h2 {
 div ul li {
   list-style: none;
   margin: 0 10px;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #f00, 0 0 10px #ff8d00, 0 0 98px #f00;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
 }
 
 div ul li:nth-child(even) {
-  background-color: rgb(198, 198, 198);
+  background-color: rgb(244, 183, 85, 0.5);
+}
+
+.addScore {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .add-form {
@@ -63,7 +168,10 @@ div ul li:nth-child(even) {
 }
 
 .input {
-  height: 32px;
+  height: 40px;
+  background-color: rgba(253, 199, 112, 0.8);
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 #submitBtn {
@@ -72,7 +180,43 @@ div ul li:nth-child(even) {
 }
 
 #submit {
-  width: 5rem;
-  margin-left: 6.9rem;
-  height: 2rem;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #ff7e31, #e62c03);
+  border-radius: 6px;
+  box-shadow: rgba(0.8, 1, 1, 0.7) 0 4px 8px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow 0.2s;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .container {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .add-form {
+    width: 80%;
+  }
 }
