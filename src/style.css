@@ -207,6 +207,10 @@ div ul li:nth-child(even) {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+
   h1 {
     font-size: 3rem;
   }
