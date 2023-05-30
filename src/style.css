@@ -206,7 +206,7 @@ div ul li:nth-child(even) {
   transition: box-shadow 0.2s;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 769px) {
   body {
     height: 100vh;
   }
