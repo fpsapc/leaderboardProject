@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  font-size: calc(20px + 8vh);
+  font-size: calc(21px + 8vh);
   line-height: calc(20px + 20vh);
   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #f00, 0 0 10px #ff8d00, 0 0 98px #f00;
   color: #fff6a9;
